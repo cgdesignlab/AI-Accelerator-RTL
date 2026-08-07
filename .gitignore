@@ -1,0 +1,14 @@
+# Simulation outputs
+sim/
+
+# Waveform files
+*.vcd
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# VS Code
+.vscode/settings.json
