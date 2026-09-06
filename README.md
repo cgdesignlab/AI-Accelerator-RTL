@@ -13,53 +13,30 @@ The objective of this project is to understand and implement the hardware archit
 The project focuses on RTL design, verification, modular hardware development, and architectural understanding.
 
 ---
+## Features
 
-# Current Progress
+- Parameterized Processing Element
+- 32-bit Accumulator
+- Signed Arithmetic
+- Hierarchical RTL Design
+- Generate-based N×N Systolic Array
+- GTKWave Verification
+- Icarus Verilog Compatible
 
-## Completed
+## Project Structure
 
-- ✔ 8-bit Multiplier
-- ✔ 16-bit Accumulator
-- ✔ Multiply-Accumulate (MAC) Unit
-
-## Upcoming
-
-- Processing Element (PE)
-- 2×2 Systolic Array
-- 4×4 Systolic Array
-- Matrix Multiplication Engine
-- Simple AI Accelerator
-- Performance Analysis
-- FPGA Implementation (Future)
-
----
-
-# Project Structure
-
-```
-AI Accelerator/
-│
-├── rtl/
-│   ├── multiplier.v
-│   ├── accumulator.v
-│   └── mac.v
-│
-├── tb/
-│   ├── tb_multiplier.v
-│   ├── tb_accumulator.v
-│   └── tb_mac.v
-│
-├── docs/
-├── scripts/
-├── sim/
-└── waveforms/
-```
+rtl/
+tb/
+sim/
+waveforms/
+docs/
 
 ---
 
 # Tools Used
 
 - Verilog HDL
+- System Verilog
 - Icarus Verilog
 - GTKWave
 - Visual Studio Code
@@ -67,6 +44,16 @@ AI Accelerator/
 - GitHub
 
 ---
+## Build
+
+iverilog -g2012 -o sim/systolic_array_tb \
+rtl/pe.sv \
+rtl/systolic_array.sv \
+tb/tb_systolic_array.sv
+
+vvp sim/systolic_array_tb
+
+gtkwave waveforms/systolic_array.vcd
 
 # Modules Implemented
 
@@ -111,10 +98,3 @@ Simulation performed using:
 
 ---
 
-# Current Status
-
-Project is under active development.
-
-Next milestone:
-
-Processing Element (PE)

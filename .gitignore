@@ -11,4 +11,4 @@ sim/
 *.tmp
 
 # VS Code
-.vscode/settings.json
+.vscode/
